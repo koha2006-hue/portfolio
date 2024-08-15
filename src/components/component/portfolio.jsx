@@ -1,3 +1,8 @@
+/**
+ * v0 by Vercel.
+ * @see https://v0.dev/t/2KsuSJMLRno
+ * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
+ */
 import Link from "next/link"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Input } from "@/components/ui/input"
@@ -156,14 +161,14 @@ export default function Component() {
                 exploring new technologies, contributing to open-source projects, and mentoring aspiring developers.
               </p>
             </div>
-            <div className="mx-auto max-w-sm space-y-2">
-              <div className="flex w-full items-center gap-3">
+            <div className="mx-auto w-full max-w-sm space-y-2">
+              <div className="flex items-center gap-3">
                 <Avatar className="h-9 w-9">
                   <img src="/placeholder.svg" alt="@johndoe" />
                   <AvatarFallback>JD</AvatarFallback>
                 </Avatar>
                 <div className="grid gap-0.5 text-xs">
-                  <div className="font-medium text-left">John Doe</div>
+                  <div className="font-medium">John Doe</div>
                   <div className="text-gray-500 dark:text-gray-400">john.doe@example.com</div>
                 </div>
               </div>
@@ -236,19 +241,21 @@ export default function Component() {
   )
 }
 
-function MountainIcon(props: React.SVGProps<SVGSVGElement>) {
+function MountainIcon(props) {
   return (
     <svg
+      {...props}
       xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
+      strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="h-6 w-6"
-      {...props}
     >
-      <path d="M6 19l6-6 6 6" />
+      <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
     </svg>
   )
 }
